@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-mergeDebugResources-48:/layout/fragment_details.xml",
+        "source": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-main-51:/layout/fragment_details.xml"
+    },
+    {
+        "merged": "com.example.wolforders.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "com.example.wolforders.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-mergeDebugResources-48:/layout/order_item_layout.xml",
+        "source": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-main-51:/layout/order_item_layout.xml"
+    },
+    {
+        "merged": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-mergeDebugResources-48:/layout/fragment_orders.xml",
+        "source": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-main-51:/layout/fragment_orders.xml"
+    },
+    {
+        "merged": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-mergeDebugResources-48:/layout/activity_launcher.xml",
+        "source": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-main-51:/layout/activity_launcher.xml"
+    },
+    {
+        "merged": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "/Users/alexandrucrisan/.gradle/daemon/7.3.3/com.example.wolforders.app-main-51:/layout/activity_main.xml"
+    }
+]

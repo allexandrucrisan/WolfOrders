@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OrderTitleTextStyle">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="OrderDescriptionTextStyle">
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

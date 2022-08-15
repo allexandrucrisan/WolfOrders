@@ -1,0 +1,95 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.wolforders"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:6:5-28:19
+12        android:allowBackup="true"
+12-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.8.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b86452686efed4aa1c585bd56e7956aa/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:8:9-65
+15        android:debuggable="true"
+16        android:fullBackupContent="@xml/backup_rules"
+16-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:9:9-54
+17        android:icon="@mipmap/ic_launcher"
+17-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:10:9-43
+18        android:label="@string/app_name"
+18-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:11:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:12:9-54
+20        android:supportsRtl="true"
+20-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:13:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.WolfOrders" >
+22-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:14:9-48
+23        <activity
+23-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:16:9-24:20
+24            android:name="com.example.wolforders.ui.launcher.LauncherActivity"
+24-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:17:13-57
+25            android:exported="true" >
+25-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:18:13-36
+26            <intent-filter>
+26-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:19:13-23:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:20:17-69
+27-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:20:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:22:17-77
+29-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:22:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity
+32-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:25:9-27:40
+33            android:name="com.example.wolforders.MainActivity"
+33-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:26:13-41
+34            android:exported="false" />
+34-->/Users/alexandrucrisan/StudioProjects/WolfOrders/app/src/main/AndroidManifest.xml:27:13-37
+35
+36        <uses-library
+36-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+37            android:name="androidx.window.extensions"
+37-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+38            android:required="false" />
+38-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+39        <uses-library
+39-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+40            android:name="androidx.window.sidecar"
+40-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+41            android:required="false" />
+41-->[androidx.window:window:1.0.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/b0348ed8f230f118a37bf45acca079f2/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+42
+43        <provider
+43-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+44            android:name="androidx.startup.InitializationProvider"
+44-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+45            android:authorities="com.example.wolforders.androidx-startup"
+45-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+46            android:exported="false" >
+46-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+47            <meta-data
+47-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+48                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+48-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+49                android:value="androidx.startup" />
+49-->[androidx.emoji2:emoji2:1.2.0] /Users/alexandrucrisan/.gradle/caches/transforms-3/434442cb3d6fda22e61ed77498ccffee/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+50            <meta-data
+50-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/alexandrucrisan/.gradle/caches/transforms-3/6f0861e23e47b1f20096e7143cf5f55d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+51                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+51-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/alexandrucrisan/.gradle/caches/transforms-3/6f0861e23e47b1f20096e7143cf5f55d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+52                android:value="androidx.startup" />
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/alexandrucrisan/.gradle/caches/transforms-3/6f0861e23e47b1f20096e7143cf5f55d/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+53        </provider>
+54    </application>
+55
+56</manifest>
