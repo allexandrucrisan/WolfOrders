@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.example.wolforders.databinding.ActivityMainBindingImpl;
+import com.example.wolforders.databinding.FragmentDetailsBindingImpl;
 import com.example.wolforders.databinding.FragmentOrdersBindingImpl;
 import com.example.wolforders.databinding.OrderItemLayoutBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -22,14 +23,17 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYMAIN = 1;
 
-  private static final int LAYOUT_FRAGMENTORDERS = 2;
+  private static final int LAYOUT_FRAGMENTDETAILS = 2;
 
-  private static final int LAYOUT_ORDERITEMLAYOUT = 3;
+  private static final int LAYOUT_FRAGMENTORDERS = 3;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
+  private static final int LAYOUT_ORDERITEMLAYOUT = 4;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.wolforders.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.wolforders.R.layout.fragment_details, LAYOUT_FRAGMENTDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.wolforders.R.layout.fragment_orders, LAYOUT_FRAGMENTORDERS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.wolforders.R.layout.order_item_layout, LAYOUT_ORDERITEMLAYOUT);
   }
@@ -48,6 +52,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityMainBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTDETAILS: {
+          if ("layout/fragment_details_0".equals(tag)) {
+            return new FragmentDetailsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_details is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTORDERS: {
           if ("layout/fragment_orders_0".equals(tag)) {
@@ -116,10 +126,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/activity_main_0", com.example.wolforders.R.layout.activity_main);
+      sKeys.put("layout/fragment_details_0", com.example.wolforders.R.layout.fragment_details);
       sKeys.put("layout/fragment_orders_0", com.example.wolforders.R.layout.fragment_orders);
       sKeys.put("layout/order_item_layout_0", com.example.wolforders.R.layout.order_item_layout);
     }

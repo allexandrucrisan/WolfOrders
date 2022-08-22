@@ -1,27 +1,39 @@
 package com.example.wolforders.ui.orders
 
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.wolforders.data.models.OrdersData
-import com.example.wolforders.data.repositories.OrdersRepository
-import com.veselovvv.movies.data.NetworkState
-import io.reactivex.disposables.CompositeDisposable
+import com.example.wolforders.common.util.AbsentLiveData
+import com.example.wolforders.data.model.entity.WolfOrder
+import com.example.wolforders.data.repository.OrderRepository
 
 class OrdersViewModel(
-    private val ordersRepository: OrdersRepository
+    private val ordersRepository: OrderRepository
 ) : ViewModel() {
-    private val compositeDisposable = CompositeDisposable()
 
-    val getOrders: LiveData<OrdersData> by lazy {
-        ordersRepository.fetchOrders(compositeDisposable)
+    private val _shouldGetList = MutableLiveData<Boolean>()
+    private val _ordersList = MutableLiveData<List<WolfOrder>>()
+
+    val remoteOrders = Transformations
+        .switchMap(_shouldGetList) {
+            ordersRepository.getOrders()
+
+        }
+
+    val saveListInDb = Transformations
+        .switchMap(_ordersList) { orders ->
+            if (orders == null) {
+                AbsentLiveData.create()
+            } else {
+                ordersRepository.saveOrders(orders)
+            }
+        }
+
+    fun getRemoteList() {
+        _shouldGetList.postValue(true)
     }
 
-    val networkState: LiveData<NetworkState> by lazy {
-        ordersRepository.getOrdersNetworkState()
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        compositeDisposable.dispose()
+    fun setLocalList(list: List<WolfOrder>) {
+        _ordersList.postValue(list)
     }
 }

@@ -1,20 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/orders"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.orders.OrdersFragment">
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DetailsFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                                                              
+                                                        
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+             
+                    
+                                                                    
+       
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.orders.OrdersFragment"
+        android:layout_margin="@dimen/default_padding" android:tag="layout/fragment_details_0" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/order_no_title"
+            style="@style/OrderTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/order_no_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/order_no_text"
+            style="@style/OrderTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_1"                   
+            app:layout_constraintStart_toEndOf="@id/order_no_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date_title"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_size_2"
+            android:text="@string/date_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_no_title" />
+
+        <TextView
+            android:id="@+id/date_text"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_2"     
+            app:layout_constraintStart_toEndOf="@+id/date_title"
+            app:layout_constraintTop_toBottomOf="@+id/order_no_title" />
+
+        <TextView
+            android:id="@+id/total_title"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_size_2"
+            android:text="@string/total_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_title" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tag="binding_3"          
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/default_padding"
+            android:id="@+id/item_name_text"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:tag="binding_4"              
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/total_text"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="binding_5"                      
+            app:layout_constraintStart_toEndOf="@+id/total_title"
+            app:layout_constraintTop_toBottomOf="@+id/date_title" />
+
+        <TextView
+            android:id="@+id/status_text"
+            style="@style/OrderDescriptionTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:tag="binding_6"       
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/status_button"
+            app:layout_constraintEnd_toEndOf="@+id/status_button"
+            app:layout_constraintStart_toStartOf="@+id/status_button" />
+
+        <ImageButton
+            android:id="@+id/status_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_status_text"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

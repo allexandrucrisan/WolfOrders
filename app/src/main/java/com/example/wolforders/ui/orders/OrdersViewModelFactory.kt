@@ -2,10 +2,10 @@ package com.example.wolforders.ui.orders
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.wolforders.data.repositories.OrdersRepository
+import com.example.wolforders.data.repository.OrderRepository
 
 class OrdersViewModelFactory(
-    private val repository: OrdersRepository
+    private val repository: OrderRepository
 ) :
     ViewModelProvider.Factory {
 

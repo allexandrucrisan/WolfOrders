@@ -14,10 +14,11 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.order_no_title, 5);
-        sViewsWithIds.put(R.id.date_title, 6);
-        sViewsWithIds.put(R.id.total_title, 7);
-        sViewsWithIds.put(R.id.imageButton, 8);
+        sViewsWithIds.put(R.id.cardView, 5);
+        sViewsWithIds.put(R.id.order_no_title, 6);
+        sViewsWithIds.put(R.id.date_title, 7);
+        sViewsWithIds.put(R.id.total_title, 8);
+        sViewsWithIds.put(R.id.imageButton, 9);
     }
     // views
     @NonNull
@@ -28,18 +29,19 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
     // Inverse Binding Event Handlers
 
     public OrderItemLayoutBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private OrderItemLayoutBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (androidx.cardview.widget.CardView) bindings[5]
             , (android.widget.TextView) bindings[2]
-            , (android.widget.TextView) bindings[6]
-            , (android.widget.ImageButton) bindings[8]
+            , (android.widget.TextView) bindings[7]
+            , (android.widget.ImageButton) bindings[9]
             , (android.widget.TextView) bindings[1]
-            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[6]
             , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.TextView) bindings[7]
+            , (android.widget.TextView) bindings[8]
             );
         this.dateText.setTag(null);
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
@@ -77,7 +79,7 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
             setTotal((java.lang.String) variable);
         }
         else if (BR.order == variableId) {
-            setOrder((com.example.wolforders.data.models.Order) variable);
+            setOrder((com.example.wolforders.data.model.entity.WolfOrder) variable);
         }
         else {
             variableSet = false;
@@ -93,7 +95,7 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
         notifyPropertyChanged(BR.total);
         super.requestRebind();
     }
-    public void setOrder(@Nullable com.example.wolforders.data.models.Order Order) {
+    public void setOrder(@Nullable com.example.wolforders.data.model.entity.WolfOrder Order) {
         this.mOrder = Order;
         synchronized(this) {
             mDirtyFlags |= 0x2L;
@@ -119,9 +121,9 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
         java.lang.String orderStatus = null;
         java.lang.String total = mTotal;
         java.lang.Integer orderOrderId = null;
-        int androidxDatabindingViewDataBindingSafeUnboxOrderOrderId = 0;
+        java.lang.String orderOrderIdToString = null;
         java.lang.String orderDate = null;
-        com.example.wolforders.data.models.Order order = mOrder;
+        com.example.wolforders.data.model.entity.WolfOrder order = mOrder;
 
         if ((dirtyFlags & 0x5L) != 0) {
         }
@@ -139,15 +141,17 @@ public class OrderItemLayoutBindingImpl extends OrderItemLayoutBinding  {
                 }
 
 
-                // read androidx.databinding.ViewDataBinding.safeUnbox(order.orderId)
-                androidxDatabindingViewDataBindingSafeUnboxOrderOrderId = androidx.databinding.ViewDataBinding.safeUnbox(orderOrderId);
+                if (orderOrderId != null) {
+                    // read order.orderId.toString()
+                    orderOrderIdToString = orderOrderId.toString();
+                }
         }
         // batch finished
         if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.dateText, orderDate);
-            this.orderNoText.setText(androidxDatabindingViewDataBindingSafeUnboxOrderOrderId);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.orderNoText, orderOrderIdToString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusText, orderStatus);
         }
         if ((dirtyFlags & 0x5L) != 0) {

@@ -1,9 +1,13 @@
 package com.example.wolforders
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.wolforders.R
 import com.example.wolforders.databinding.ActivityMainBinding
 import com.example.wolforders.ui.orders.OrdersFragment
@@ -20,7 +24,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
-        navController?.setGraph(R.navigation.app_nav)
-        navController = findNavController(R.id.nav_host_fragment)
+//        val navHostFragment =  supportFragmentManager
+//            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+
+//        navController = findNavController(R.id.nav_host_fragment)
+//        navController = navHostFragment.navController
+
+//        navController?.setGraph(R.navigation.app_nav)
+
+
+
+       val  navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
     }
 }

@@ -8,15 +8,19 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.wolforders.R;
-import com.example.wolforders.data.models.Order;
+import com.example.wolforders.data.model.entity.WolfOrder;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class OrderItemLayoutBinding extends ViewDataBinding {
+  @NonNull
+  public final CardView cardView;
+
   @NonNull
   public final TextView dateText;
 
@@ -42,15 +46,17 @@ public abstract class OrderItemLayoutBinding extends ViewDataBinding {
   public final TextView totalTitle;
 
   @Bindable
-  protected Order mOrder;
+  protected WolfOrder mOrder;
 
   @Bindable
   protected String mTotal;
 
   protected OrderItemLayoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView dateText, TextView dateTitle, ImageButton imageButton, TextView orderNoText,
-      TextView orderNoTitle, TextView statusText, TextView totalText, TextView totalTitle) {
+      CardView cardView, TextView dateText, TextView dateTitle, ImageButton imageButton,
+      TextView orderNoText, TextView orderNoTitle, TextView statusText, TextView totalText,
+      TextView totalTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.cardView = cardView;
     this.dateText = dateText;
     this.dateTitle = dateTitle;
     this.imageButton = imageButton;
@@ -61,10 +67,10 @@ public abstract class OrderItemLayoutBinding extends ViewDataBinding {
     this.totalTitle = totalTitle;
   }
 
-  public abstract void setOrder(@Nullable Order order);
+  public abstract void setOrder(@Nullable WolfOrder order);
 
   @Nullable
-  public Order getOrder() {
+  public WolfOrder getOrder() {
     return mOrder;
   }
 
