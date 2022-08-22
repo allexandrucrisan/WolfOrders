@@ -2,7 +2,7 @@ package com.example.wolforders.ui.orders
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.wolforders.data.repositories.OrdersRepository
+import com.example.wolforders.data.repository.OrderRepository
 import org.koin.dsl.module
 
 val ordersModule = module {
@@ -11,7 +11,7 @@ val ordersModule = module {
 
 private fun provideViewModel(
     fragment: Fragment,
-    repository: OrdersRepository
+    repository: OrderRepository
 ): OrdersViewModel {
     return ViewModelProvider(
         fragment,

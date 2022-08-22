@@ -12,11 +12,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.net.ssl.HostnameVerifier
 
-private const val BASE_API_URL = BuildConfig.BASE_URL
+private const val BASE_API_URL = "http://demo9580962.mockable.io/"
 
 val retrofitNetworkModule = module {
+    single { provideGson() }
     single { provideOkHttpClient() }
     single { provideRetrofit(get(), get()) }
+}
+
+private fun provideGson(): Gson {
+    return GsonBuilder().create()
 }
 
 private fun provideOkHttpClient(): OkHttpClient {

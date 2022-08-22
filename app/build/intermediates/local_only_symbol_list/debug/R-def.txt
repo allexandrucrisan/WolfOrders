@@ -18,11 +18,14 @@ drawable ic_launcher_foreground
 drawable wolf
 id action_navigation_orders_to_navigation_details
 id app_nav
+id cardView
 id container
 id date_text
 id date_title
+id guideline2
 id imageButton
-id message
+id imageView
+id item_name_text
 id nav_host_fragment
 id navigation_details
 id navigation_orders
@@ -30,6 +33,7 @@ id order_no_text
 id order_no_title
 id orders
 id ordersListRecyclerView
+id status_button
 id status_text
 id total_text
 id total_title
@@ -42,7 +46,9 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation app_nav
 string app_name
+string change_status_text
 string date_title
+string no_internet_connection
 string order_no_title
 string total_title
 style OrderDescriptionTextStyle

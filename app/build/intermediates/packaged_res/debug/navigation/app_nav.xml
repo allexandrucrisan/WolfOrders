@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_orders"
         android:name="com.example.wolforders.ui.orders.OrdersFragment"
-        tools:layout="@layout/fragment_orders" >
+        tools:layout="@layout/fragment_orders">
         <action
             android:id="@+id/action_navigation_orders_to_navigation_details"
             app:destination="@id/navigation_details" />
@@ -19,8 +19,8 @@
         android:name="com.example.wolforders.ui.details.DetailsFragment"
         tools:layout="@layout/fragment_details">
         <argument
-            android:name="projectId"
-            app:argType="string" />
+            android:name="orderId"
+            app:argType="integer" />
     </fragment>
 
 </navigation>
